@@ -35,9 +35,9 @@ const App = () => {
 
 ### State
 
-**State** in React is a plain JavaScript object used by React to represent a piece of information about a component's current situation. It is completely managed by the component itself. These states, along with other lifecyle methods and React features are managed by a special function provided by the React library called **hooks**.
+**State** in React is a plain JavaScript object used by React to represent a piece of information about a component's current situation. It is completely managed by the component itself. These states, along with other lifecycle methods and React features are managed by a special function provided by the React library called **hooks**.
 
-Some rules to keep in mind is that we should never modify / mutate the state manually. Special functions that comes with the React library should be used instead.
+Some rules to keep in mind is that we should never modify / mutate the state manually. Special functions that come with the React library should be used instead.
 
 ### useState()
 
@@ -86,11 +86,57 @@ useEffect(() => {
 
 ### API
 
-Api stands for Application Programming Interface. In the context of this program, an external API (omdbapi.com) is used for getting access to data for listing movies.
+API stands for Application Programming Interface. In the context of this program, an external API (omdbapi.com) is used for getting access to data for listing movies.
 
 ### Asynchronous Function
 
 An `async` function is used when we know it takes time to fetch data (e.g. movies).
+
+### Custom Components
+
+We know that React is a component based library. Custom components are user-defined components created to encapsulate and reuse specific pieces of UI or functionality. Custom components are necessary for reusability, maintainability, abstraction, separation of concerns, composition, hierarchy, and collaboration.
+
+An example of a custom component used in this project is the **MovieCard** component.
+
+### JSX Extension
+
+Some files will have a **.js** extension whereas some will have a **.jsx** extension. Whenever a new component is created in React, the **.jsx** extension is preferable.
+
+### Destructuring
+
+Destructuring is a feature in JavaScript that allows the extraction of individual values from arrays or objects and assign them to variables in a concise and convenient way. Here are examples:
+
+Without destructuring:
+
+```javascript
+// Example 1
+const stateArray = useState(0);
+const counter = stateArray[1];
+const setCounter = stateArray[2];
+
+// Example 2
+const MovieCard = (props) => {
+  <div>
+    <h1>{props.movie.title}</h1>
+    <p>{props.movie.desc}</p>
+  </div>;
+};
+```
+
+With destructuring:
+
+```javascript
+// Example 1
+const [counter, setCounter] = useState(0);
+
+// Example 2
+const MovieCard = ({ movie }) => {
+  <div>
+    <h1>{movie.title}</h1>
+    <p>{movie.desc}</p>
+  </div>;
+};
+```
 
 TODO:
 
