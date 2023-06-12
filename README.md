@@ -1,6 +1,8 @@
 # MovieHunt
 
-This web app was created using React. The purpose of building this is to brush up on my React skills and refresh my fundamentals on some important concepts.
+![MovieHunt App Screenshot](./src/assets/moviehunt.png)
+
+MovieHunt lets you find your favorite movies. The purpose of building this is to brush up on my React skills and refresh my fundamentals on some important concepts.
 
 ## Learnings
 
